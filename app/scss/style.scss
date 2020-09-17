@@ -275,14 +275,14 @@
   text-align: center;
   padding: 0 15px;
   &:hover {
-    .advanteges__item-images{
+    .advanteges__item-images {
       background-color: $green;
     }
-    .advanteges__item-title{
+    .advanteges__item-title {
       color: $green;
     }
-    .advanteges__item-images{
-      g{
+    .advanteges__item-images {
+      g {
         fill: #fff;
       }
     }
@@ -296,9 +296,9 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto 30px;
-    transition: all .3s;
-    g{
-      transition: all .3s;
+    transition: all 0.3s;
+    g {
+      transition: all 0.3s;
     }
   }
   &-title {
@@ -306,10 +306,48 @@
     font-size: 24px;
     color: #fff;
     @include f500;
-    transition: all .3s;
+    transition: all 0.3s;
   }
   &-text {
     font-size: 15px;
   }
 }
 // end advanteges
+// start authors
+.authors {
+  background-image: url(../images/authors.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 750px;
+  &__box {
+    max-width: 650px;
+    width: 100%;
+    min-height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green;
+
+    &-title {
+      font-size: 30px;
+      line-height: 36px;
+      color: #fff;
+      margin-right: 45px;
+      max-width: 265px;
+      span {
+        @include f700;
+      }
+    }
+    &-link {
+      font-size: 18px;
+      line-height: 36px;
+      padding: 14px 40px;
+      background-color: #fff;
+    }
+  }
+}
+// end authors
