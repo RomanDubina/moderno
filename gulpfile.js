@@ -26,6 +26,7 @@ gulp.task('style', function(){
         'node_modules/slick-carousel/slick/slick.css',
         'node_modules/magnific-popup/dist/magnific-popup.css',
         'app/plugins/rateyo/jquery.rateyo.css'
+        // 'node_modules/rateyo/lib/cjs/rateyo.css'
     ])
     .pipe(concat('libs.min.css'))
     .pipe(cssmin())
@@ -38,6 +39,7 @@ gulp.task('script', function(){
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'node_modules/mixitup/dist/mixitup.js',
         'app/plugins/rateyo/jquery.rateyo.js'
+        // 'node_modules/rateyo/lib/cjs/rateyo.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
