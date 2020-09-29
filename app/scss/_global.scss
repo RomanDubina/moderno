@@ -1,56 +1,104 @@
-html{
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
 }
 *,
 *::before,
-*::after{
-    box-sizing: inherit;
+*::after {
+  box-sizing: inherit;
 }
-a{
-    text-decoration: none;
-    display: inline-block;
-    color: $text;
+html,
+body {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: $text;
 }
 ul,
-li{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-body{
-    font-family: 'Roboto-Regular', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    color: $text;
+body {
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: $text;
 }
-.container{
-    max-width: 1200px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container-fluid {
+  max-width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .container-fluid {
     padding: 0 15px;
-    margin: 0 auto;
+  }
 }
-.container-fluid{
-    max-width: 100%;
-    padding: 0 30px;
-    margin: 0 auto;
+.page-content{
+    background-color: $grey;
+}
+.title {
+  color: $bg;
+  @include f700;
+  font-size: 36px;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.rate-star {
+  display: inline-block;
+  margin-right: 13px;
 }
 
+.breadcrumbs {
+  &__inner {
+    padding: 45px 0px 40px;
+  }
+  &__list {
+    li {
+      display: inline-block;
+      position: relative;
 
-
-@media(max-width: 720px){
-    .container-fluid{
-        padding: 0 15px;
+      & + li {
+        padding-left: 24px;
+        &::before {
+          content: "-";
+          position: absolute;
+          left: 8px;
+          color: $green;
+        }
+      }
+      &:last-child{
+          a,
+          span{
+              color: $bg;
+          }
+      }
     }
-}
-.title{
-    color: $bg;
-    @include f700;
-    font-size: 36px;
-    line-height: 60px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-.rate-star{
-    display: inline-block;
-    margin-right: 13px;
+    a {
+        color: #b0bec5;
+    }
+  }
 }
